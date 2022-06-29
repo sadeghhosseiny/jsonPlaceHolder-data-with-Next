@@ -44,7 +44,11 @@ function Post({ post }) {
                 {post.id}
               </Avatar>
             }
-            title={post.title}
+            title={
+              <Typography style={{ fontWeight: "bold" }}>
+                {post.title}
+              </Typography>
+            }
             subheader="September 14, 2016"
           />
           <CardActions sx={{ justifyContent: "end" }} disableSpacing>
@@ -66,7 +70,9 @@ function Post({ post }) {
           </CardActions>
           <Collapse in={expand} timeout="auto" unmountOnExit>
             <CardContent>
-              <Typography paragraph>{post.body}</Typography>
+              <Typography fontFamily="cursive" paragraph>
+                {post.body}
+              </Typography>
             </CardContent>
           </Collapse>
         </Card>
